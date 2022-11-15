@@ -54,4 +54,27 @@ component rest="true" restpath="/customer"
         return myCustomer;
     }
 
+    // example of pulling properties from the header.  Could include a token of somekind
+    remote function updateCustomerEmail
+            (required numeric key restArgSource="path",
+             required string email restArgSource="form",
+             required string token restArgSource="header") httpMethod="POST" restPath="/{key}/email"
+    {
+        if (arguments.token EQ 'abc-123')
+        {
+            myCustomer = entityLoadByPK("customer",arguments.key);
+            myCustomer.setCustomerEmail(arguments.email);
+            entitySave(myCustomer);
+            ormFlush();
+            return "OK!";
+        }
+        else
+        {
+            restResponse = {};
+            restResponse.status=401;
+            restResponse.content="Token invalid.";
+            RestSetResponse(restResponse);
+        }
+    }
+
 }
