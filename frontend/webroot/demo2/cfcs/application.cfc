@@ -1,6 +1,9 @@
 component
 {
-    this.name = "REST-Demo";
+
+    // we only have to do this because of a bug in Lucee 5.3.  Normally, the application.cfc properties inherit, but for ORM settings they don't.
+
+    this.name = "CRMApp";
     this.datasource = {
         class: 'com.mysql.cj.jdbc.Driver'
         , bundleName: 'com.mysql.cj'
@@ -13,5 +16,12 @@ component
         , validate:false // default: false
     };
 
+    this.ormenabled = true;
+    this.ormsettings =
+    {
+        logsql: true,
+        dbcreate: "update",
+        cfclocation: "../db"
+    };
 
 }

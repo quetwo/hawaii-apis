@@ -1,6 +1,6 @@
 component
 {
-    this.name = "REST-Demo";
+    this.name = "CRMApp";
     this.datasource = {
         class: 'com.mysql.cj.jdbc.Driver'
         , bundleName: 'com.mysql.cj'
@@ -13,5 +13,22 @@ component
         , validate:false // default: false
     };
 
+    this.ormenabled = true;
+    this.ormsettings =
+    {
+        logsql: true,
+        dbcreate: "update"
+    };
+
+    this.sessionmanagement = true;
+    this.sessiontimeout = createTimespan(0,0,30,0);   // 0 days, 0 hours, 30 minutes, 0 seconds
+    this.applicationtimeout = createTimespan(1, 0, 0, 0);  // 1 days, 0 hours, 0 minutes, 0 seconds
+
+    function onApplicationStart()
+    {
+
+        RestInitApplication(expandPath('./cfcs'), '/crm', false, server.system.environment.ADMIN_PASSWORD);
+
+    }
 
 }
