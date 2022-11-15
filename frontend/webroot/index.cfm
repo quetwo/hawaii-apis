@@ -12,7 +12,9 @@ If you didn't get an error message above, that means that your CFML and DB Engin
 
 <table width="25%">
 
-
+    <ul>
+        <li><a href="demo1/">Demo 1</a></li>
+    </ul>
 
 </table>
 
