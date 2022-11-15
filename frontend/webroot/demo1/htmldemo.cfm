@@ -10,12 +10,29 @@
 </head>
 <body>
 
-<h3>Demo 1</h3>
+<h3>Demo 1 - HTML Table</h3>
 <hr>
-<ul>
-    <li><a href="htmldemo.cfm">See data as HTML</a></li>
-    <li><a href="datatables.cfm">See data in Datatables</a></li>
-</ul>
+
+<script>
+    function pullDataFromServer()
+    {
+        console.log("Doing AJAX call...");
+
+        $.ajax(
+            {
+            url: "/rest/electiondata/michigan"
+            }).done(function( html )
+                {
+                    console.log("Done!")
+                    $( "#results" ).append( html );
+                });
+
+    }
+</script>
+
+<button class="btn btn-primary" onclick="pullDataFromServer()">Load data from server</button>
+
+<div id="results"></div>
 
 
 
