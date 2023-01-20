@@ -1,5 +1,5 @@
 # CFML REST Presentation
-Slides, code and docker images used with the CFML REST presentation being given to the MMCFUG group in November 2022.
+Slides, code and docker images used with the CFML REST presentation being given to the Hawaii CFUG in Jan 2023.
 
 ### Docker Information
 To follow along in this presentation :
@@ -30,7 +30,7 @@ Database will be auto-created based on code.  No SQL dumps required to follow al
 
 
 ### License
-Copyright 2022, Nick Kwiatkowski as an agent for the Michigan State University Board of Trustees
+Copyright 2023, Nick Kwiatkowski as an agent for the Michigan State University Board of Trustees
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
