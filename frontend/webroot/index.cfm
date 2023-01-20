@@ -14,6 +14,7 @@ If you didn't get an error message above, that means that your CFML and DB Engin
 
     <ul>
         <li><a href="demo1/">Demo 1</a></li>
+        <li><a href="demo2/">Demo 2</a></li>
     </ul>
 
 </table>
