@@ -1,8 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `mmcfug-restdemo` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
-USE `mmcfug-restdemo`;
+CREATE DATABASE  IF NOT EXISTS `hawaii-apis` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci */;
+USE `hawaii-apis`;
 -- MySQL dump 10.13  Distrib 8.0.13, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: mmcfug-restdemo
+-- Host: 127.0.0.1    Database: hawaii-apis
 -- ------------------------------------------------------
 -- Server version	5.5.5-10.9.4-MariaDB-1:10.9.4+maria~ubu2204
 
